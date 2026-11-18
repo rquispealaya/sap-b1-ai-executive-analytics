@@ -10,22 +10,13 @@ In enterprises running **SAP Business One**, executives and department heads oft
 ## 💡 Solution Overview
 I designed and led the implementation of a web-based **Virtual SAP Consultant** that enables natural language querying over live ERP data. Business users ask questions in plain language (covering Sales, Purchasing, and Approvals) and receive immediate executive summaries along with dynamic charts, without needing SQL skills or navigating complex ERP menus.
 
-## 🏗️ Solution Architecture
 
-```text
-[ Executive User (Web UI) ]
-       │  1. Natural Language Query (e.g., "Top 5 customers by sales")
-       ▼
-[ API Orchestration Layer ]
-       │  2. Intent Parsing & Query Translation
-       ├──► [ Google Gemini API ] ──► Structures data request parameters
-       │
-       ▼  3. Authenticated OData Call
-[ SAP Business One Service Layer ] ──► Retrieves real-time ERP entities
-       │
-       ▼  4. Visualization Engine
-[ Executive BI Dashboard ] ──► Renders summary & interactive bar charts
-```
+## 🔄 How It Works
+1. **Natural Language Input:** The executive types a business question in the web interface (e.g., *"Top 5 customers by sales"*).
+2. **AI Intent Translation:** **Google Gemini** interprets the request and translates it into structured query parameters.
+3. **Real-Time ERP Retrieval:** The backend connects securely to **SAP Business One Service Layer** to fetch live transactional data.
+4. **Instant Visualization:** The web interface receives the structured data and renders an executive summary alongside dynamic charts.
+
 
 ## 🖥️ System Preview
 
